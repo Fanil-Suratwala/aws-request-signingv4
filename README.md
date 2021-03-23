@@ -12,6 +12,12 @@ When you send HTTP requests to AWS, you sign the requests so that AWS can identi
 - Protect data in transit
 - Protect against potential replay attacks
 
+**When to sign requests**
+When you write custom code to send HTTP requests to AWS, you need to include code to sign the requests. You might do this for the following reasons:
+	- You are working with a programming language for which there is no AWS SDK.
+	- You want complete control over how a request is sent to AWS.
+
+**Reference :** https://docs.aws.amazon.com/general/latest/gr/signing_aws_api_requests.html
 
 In order to send the requests we need to sign the requests and hence we require the following : 
 - request_url
@@ -19,9 +25,6 @@ In order to send the requests we need to sign the requests and hence we require 
 - region_name
 - access_key
 - secret_key
-
-**Reference :** https://docs.aws.amazon.com/general/latest/gr/signing_aws_api_requests.html
-
 
 **1] Add the following aws-request-signing-apache-interceptor dependency in POM.xml file**
                
